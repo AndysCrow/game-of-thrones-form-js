@@ -1,0 +1,164 @@
+body{
+    margin:0;
+    font-family:"Roboto", sans-serif;
+    background:#f5f5f5;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    flex-direction:column;
+    background-color:coral;
+    padding:15px;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+header button{
+    font-size:15px;
+    padding:10px;
+    border-radius:10px;
+    background-color:rgb(223,158,98);
+    border:none;
+    color:white;
+    transition:.2s ease;
+}
+
+header button:hover{
+    cursor:pointer;
+    box-shadow:1px 1px 10px 0px white;
+}
+
+header button:active{
+    background-color:rgb(243,126,126);
+    transform:translateY(1px);
+}
+
+header h1{
+    text-align: center;
+    color: white;
+}
+
+/* PREGUNTAS */
+.pregunta{
+    display:none;
+}
+
+.activa{
+    display:flex;
+    flex-direction:column;
+    margin-top:2vh;
+    padding:0 20px;
+    gap:15px;
+}
+
+.activa h1{
+    font-size:30px;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    padding:10px;
+}
+
+/* OPCIONES */
+.opcion{
+    display:flex;
+    align-items:center;
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    gap:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+    border:2px solid transparent;
+    transition:.2s ease;
+}
+
+/* Hover (antes de seleccionar) */
+.opcion:hover{
+    cursor:pointer;
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+    transform:translateY(-1px);
+}
+
+/* Click/tap */
+.opcion:active{
+    transform:translateY(1px);
+    box-shadow:0 2px 8px rgba(0,0,0,.10);
+}
+
+/* Seleccionado: se aplica al label cuando el input radio está checked */
+.opcion:has(input:checked){
+    border-color:coral;
+    background:rgba(255,127,80,.12);
+}
+
+/* BOTONES (Siguiente / Calificar / Volver) */
+.acciones{
+    display:flex;
+    justify-content:center;
+}
+
+.acciones button,
+#btnCalificar,
+#btnVolver{
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:coral;
+    color:white;
+    font-size:16px;
+    transition:.2s ease;
+}
+
+.acciones button:hover,
+#btnCalificar:hover,
+#btnVolver:hover{
+    cursor:pointer;
+    box-shadow:1px 1px 10px 0px rgba(0,0,0,.25);
+}
+
+.acciones button:active,
+#btnCalificar:active,
+#btnVolver:active{
+    background-color:rgb(243,126,126);
+    transform:translateY(1px);
+    
+}
+
+/* DESKTOP */
+@media (min-width:700px){
+
+    .activa{
+        margin-top:10vh;
+        max-width:700px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .activa h1{
+        font-size:36px;
+    }
+
+    .opcion{
+        font-size:18px;
+        padding:16px;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content:space-between;
+        padding:20px 40px;
+    }
+
+    header button{
+        font-size:17px;
+        padding:12px 20px;
+    }
+
+    .acciones{
+        justify-content:flex-end;
+    }
+
+
+}

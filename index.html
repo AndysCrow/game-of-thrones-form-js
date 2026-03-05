@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ico.ico">
+    <title>Test GOF</title>
+</head>
+<body>
+
+
+  <header>
+    <h1>Cuestionario Game Of Thrones</h1>
+    <button id="btnReiniciar" type="button">Reiniciar</button>
+  </header>
+
+  <main>
+    <!-- Pregunta 1 -->
+        <section class="pregunta activa" data-correcta="leon">
+            <h1>¿Cuál es el símbolo de la casa Lannister?</h1>
+
+            <label class="opcion">
+                <input type="radio" name="p1" value="venado"> Venado
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p1" value="leon"> León
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p1" value="flor"> Flor
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p1" value="perros"> Perros
+            </label>
+
+            <div class="acciones">
+                <button class="btnSiguiente" type="button">Siguiente</button>
+        </div>
+        </section>
+
+        <!-- Pregunta 2 -->
+        <section class="pregunta" data-correcta="norte">
+            <h1>¿Cómo se llama la región de la casa Stark?</h1>
+
+            <label class="opcion">
+                <input type="radio" name="p2" value="dorne"> Dorne
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p2" value="norte"> El Norte
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p2" value="islas"> Islas del Hierro
+            </label>
+
+            <div class="acciones">
+                <button class="btnSiguiente" type="button">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Pregunta 3 (última) -->
+        <section class="pregunta" data-correcta="targaryen">
+            <h1>¿Qué casa tiene un dragón como símbolo?</h1>
+
+            <label class="opcion">
+                <input type="radio" name="p3" value="tyrell"> Tyrell
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p3" value="targaryen"> Targaryen
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p3" value="arryn"> Arryn
+            </label>
+
+            <div class="acciones">
+                <button id="btnCalificar" type="button">Calificar</button>
+            </div>
+        </section>
+
+        <!-- Resultado -->
+        <section class="pregunta" id="resultado">
+            <h1>Resultado</h1>
+            <p id="textoResultado"></p>
+            <button id="btnVolver" type="button">Volver a empezar</button>
+        </section>
+  </main>
+
+
+
+  <script src="main.js"></script>
+
+    
+</body>
+</html>
